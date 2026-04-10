@@ -9,13 +9,27 @@ import zipfile
 import asyncio
 import shutil
 import ctypes
+import webbrowser
+import threading
 from typing import List
 
+# Try to import pystray and PIL for the system tray
+try:
+    import pystray
+    from PIL import Image, ImageDraw
+    PYS_TRAY_AVAILABLE = True
+except ImportError:
+    PYS_TRAY_AVAILABLE = False
+
 # Configure logging
+log_file = "system.log"
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s [%(levelname)s] %(message)s',
-    handlers=[logging.StreamHandler(sys.stdout)]
+    handlers=[
+        logging.StreamHandler(sys.stdout),
+        logging.FileHandler(log_file, encoding="utf-8")
+    ]
 )
 logger = logging.getLogger("Launcher")
 
@@ -26,15 +40,18 @@ def is_admin():
     except:
         return False
 
-def kill_existing_caddy():
-    """ 關閉所有現有的 caddy 進程，防止端口衝突 (尤其是 2019 管理端口) """
-    logger.info("正在清理現有的 Caddy 進程...")
-    try:
-        # 使用 taskkill 強制關閉所有名為 caddy.exe 的進程
-        subprocess.run(["taskkill", "/F", "/IM", "caddy.exe"], 
-                       capture_output=True, text=True)
-    except Exception as e:
-        logger.warning(f"清理 Caddy 進程時發生錯誤 (可能目前沒有運行中的 Caddy): {e}")
+def hide_console():
+    """ 隱藏控制台視窗，實現真正的背景運行 """
+    if sys.platform == 'win32':
+        try:
+            kernel32 = ctypes.windll.kernel32
+            user32 = ctypes.windll.user32
+            hWnd = kernel32.GetConsoleWindow()
+            if hWnd:
+                user32.ShowWindow(hWnd, 0) # SW_HIDE
+                logger.info("控制台視窗已隱藏，程式進入背景運行模式。")
+        except Exception as e:
+            logger.warning(f"隱藏控制台失敗: {e}")
 
 def get_resource_path(relative_path: str) -> str:
     """ Get absolute path to resource, works for dev and for PyInstaller """
@@ -65,6 +82,15 @@ def download_caddy():
         logger.error(f"下載 Caddy 失敗: {e}")
         sys.exit(1)
 
+def kill_existing_caddy():
+    """ 關閉所有現有的 caddy 進程，防止端口衝突 (尤其是 2019 管理端口) """
+    logger.info("正在清理現有的 Caddy 進程...")
+    try:
+        subprocess.run(["taskkill", "/F", "/IM", "caddy.exe"], 
+                       capture_output=True, text=True)
+    except Exception as e:
+        logger.warning(f"清理 Caddy 進程時發生錯誤 (可能目前沒有運行中的 Caddy): {e}")
+
 def start_process(command: List[str], name: str):
     """ Starts a process and returns the Popen object """
     logger.info(f"正在啟動 {name}...")
@@ -83,23 +109,28 @@ def start_process(command: List[str], name: str):
         logger.error(f"啟動 {name} 失敗: {e}")
         sys.exit(1)
 
+def monitor_process_output(proc: subprocess.Popen):
+    """ 獨立線程：監控單個進程的輸出 """
+    try:
+        for line in iter(proc.stdout.readline, ''):
+            if line:
+                logger.info(f"[{proc.pid}] {line.strip()}")
+    except Exception as e:
+        logger.error(f"監控進程 {proc.pid} 輸出時發生錯誤: {e}")
+
 def monitor_processes(processes: List[subprocess.Popen]):
-    """ Monitors processes and prints their output in real-time """
+    """ 監控所有進程是否仍在運行 """
+    # 為每個進程啟動一個輸出監控線程
+    for proc in processes:
+        t = threading.Thread(target=monitor_process_output, args=(proc,), daemon=True)
+        t.start()
+
     while True:
         for proc in processes:
             if proc.poll() is not None:
-                # 嘗試讀取最後幾行日誌以診斷錯誤
-                remaining_output = proc.stdout.read()
                 logger.error(f"進程 {proc.pid} 已意外停止 (Exit Code: {proc.returncode})")
-                if remaining_output:
-                    logger.error(f"最後日誌輸出:\n{remaining_output}")
                 return False
-            
-            line = proc.stdout.readline()
-            if line:
-                logger.info(f"[{proc.pid}] {line.strip()}")
-        
-        time.sleep(0.1)
+        time.sleep(1)
     return True
 
 async def run_internal_server():
@@ -111,6 +142,51 @@ async def run_internal_server():
         logger.error(f"伺服器運行出錯: {e}")
         sys.exit(1)
 
+class TrayIconManager:
+    """ 系統托盤圖標管理類 """
+    def __init__(self, processes_ref):
+        self.processes = processes_ref
+
+    def create_image(self):
+        """ 創建一個簡單的圖標 (藍色圓形) """
+        width, height = 64, 64
+        image = Image.new('RGB', (width, height), (30, 41, 59)) # Slate-800
+        dc = ImageDraw.Draw(image)
+        dc.ellipse([10, 10, 54, 54], fill=(59, 130, 246)) # Blue-500
+        return image
+
+    def open_dashboard(self, icon, item):
+        logger.info("打開管理控制台...")
+        webbrowser.open("http://localhost:8082")
+
+    def restart_services(self, icon, item):
+        logger.info("請求重啟服務...")
+        os._exit(0)
+
+    def exit_app(self, icon, item):
+        logger.info("正在從托盤退出程序...")
+        icon.stop()
+        for proc in self.processes:
+            proc.terminate()
+        os._exit(0)
+
+    def run(self):
+        if not PYS_TRAY_AVAILABLE:
+            logger.warning("pystray 或 Pillow 未安裝，無法啟動系統托盤圖標。")
+            return
+
+        icon = pystray.Icon("McpProxy")
+        icon.icon = self.create_image()
+        icon.title = "McpProxy Gateway"
+        icon.menu = pystray.Menu(
+            pystray.MenuItem("打開管理控制台", self.open_dashboard),
+            pystray.MenuItem("重啟服務", self.restart_services),
+            pystray.MenuItem("退出程式", self.exit_app)
+        )
+        
+        logger.info("系統托盤圖標已啟動。")
+        icon.run()
+
 def main():
     # --- 內部模式：僅運行 MCP Server ---
     if len(sys.argv) > 1 and sys.argv[1] == "--internal-server":
@@ -121,7 +197,10 @@ def main():
         return
 
     # --- 外部模式：啟動所有服務 ---
-    # 0. 權限檢查 (Caddy 綁定 80/443 端口需要管理員權限)
+    # 0. 隱藏控制台視窗，實現背景運行
+    hide_console()
+
+    # 0.1 權限檢查 (Caddy 綁定 80/443 端口需要管理員權限)
     if not is_admin():
         logger.warning("⚠️ 警告：目前未以管理員權限執行。Caddy 可能會因為無法綁定 80/443 端口而啟動失敗。")
         logger.info("建議：請嘗試『右鍵 -> 以系統管理員身分執行』。")
@@ -162,6 +241,11 @@ def main():
         # 啟動 Caddy
         caddy_proc = start_process(caddy_cmd, "Caddy Proxy")
         processes.append(caddy_proc)
+        
+        # 啟動系統托盤圖標 (在獨立線程中運行)
+        tray = TrayIconManager(processes)
+        tray_thread = threading.Thread(target=tray.run, daemon=True)
+        tray_thread.start()
         
         logger.info("=== 所有服務已啟動，正在監控輸出 ===")
         if not monitor_processes(processes):

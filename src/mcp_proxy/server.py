@@ -1,15 +1,20 @@
 import asyncio
 import logging
 import uuid
+import os
 from typing import Any, Dict, Optional
 from fastapi import FastAPI, Request, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from sse_starlette.sse import EventSourceResponse
 from pydantic import BaseModel
 
 from .proxy import McpProxy
 from .config import settings
 from .exceptions import McpProxyError
+from .todo import TodoManager, TodoItem
+from .utils import get_resource_path
 
 logger = logging.getLogger(__name__)
 
@@ -21,6 +26,10 @@ class McpMessage(BaseModel):
     method: str
     params: Optional[Dict[str, Any]] = None
     id: Optional[Any] = None
+
+class TodoCreate(BaseModel):
+    content: str
+    priority: str = "medium"
 
 class McpServer:
     def __init__(self):
@@ -36,6 +45,7 @@ class McpServer:
         )
         
         self.proxy: Optional[McpProxy] = None
+        self.todo_manager = TodoManager()
         self._setup_routes()
 
     async def _handle_mcp_message(self, request: Request, sessionId: Optional[str] = None):
@@ -112,6 +122,95 @@ class McpServer:
             return error_resp
 
     def _setup_routes(self):
+        # 靜態文件掛載
+        static_dir = get_resource_path("static")
+        self.app.mount("/static", StaticFiles(directory=static_dir), name="static")
+
+        @self.app.get("/")
+        async def index():
+            """回傳管理控制台主頁"""
+            return FileResponse(get_resource_path("static/index.html"))
+
+        # --- Todo 管理 API ---
+        @self.app.get("/api/todos")
+        async def get_todos():
+            """獲取所有待辦事項"""
+            return self.todo_manager.get_all_todos()
+
+        @self.app.post("/api/todos")
+        async def create_todo(todo: TodoCreate):
+            """創建新的待辦事項"""
+            return self.todo_manager.add_todo(content=todo.content, priority=todo.priority)
+
+        @self.app.put("/api/todos/{todo_id}")
+        async def update_todo(todo_id: str, updates: Dict[str, Any]):
+            """更新待辦事項"""
+            res = self.todo_manager.update_todo(todo_id, updates)
+            if not res:
+                raise HTTPException(status_code=404, detail="Todo not found")
+            return res
+
+        @self.app.delete("/api/todos/{todo_id}")
+        async def delete_todo(todo_id: str):
+            """刪除待辦事項"""
+            if not self.todo_manager.delete_todo(todo_id):
+                raise HTTPException(status_code=404, detail="Todo not found")
+            return {"status": "success", "message": "Todo deleted"}
+
+        @self.app.patch("/api/todos/{todo_id}/toggle")
+        async def toggle_todo(todo_id: str):
+            """切換完成狀態"""
+            res = self.todo_manager.toggle_todo(todo_id)
+            if not res:
+                raise HTTPException(status_code=404, detail="Todo not found")
+            return res
+
+        # --- 日誌監控 API ---
+        @self.app.get("/api/logs")
+        async def get_logs():
+            """獲取最近的系統日誌"""
+            log_path = "system.log"
+            if not os.path.exists(log_path):
+                return {"logs": [], "message": "Log file not found"}
+            
+            try:
+                with open(log_path, "r", encoding="utf-8") as f:
+                    lines = f.readlines()
+                    return {"logs": lines[-100:]} # 回傳最後 100 行
+            except Exception as e:
+                raise HTTPException(status_code=500, detail=f"Read log failed: {e}")
+
+        @self.app.get("/api/logs/stream")
+        async def stream_logs():
+            """實時流式傳輸日誌 (SSE)"""
+            async def event_generator():
+                log_path = "system.log"
+                if not os.path.exists(log_path):
+                    yield {"event": "error", "data": "Log file not found"}
+                    return
+
+                # 先讀取最後一部分
+                with open(log_path, "r", encoding="utf-8") as f:
+                    f.seek(0, os.SEEK_END)
+                    file_size = f.tell()
+                    # 讀取最後 10KB
+                    offset = max(0, file_size - 10240)
+                    f.seek(offset)
+                    for line in f:
+                        yield {"event": "log", "data": line.strip()}
+
+                # 開始追蹤新行
+                with open(log_path, "r", encoding="utf-8") as f:
+                    f.seek(0, os.SEEK_END)
+                    while True:
+                        line = f.readline()
+                        if not line:
+                            await asyncio.sleep(0.5)
+                            continue
+                        yield {"event": "log", "data": line.strip()}
+
+            return EventSourceResponse(event_generator())
+
         @self.app.api_route("/sse", methods=["GET", "POST"])
         async def sse_endpoint(request: Request):
             """

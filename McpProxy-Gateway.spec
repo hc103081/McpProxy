@@ -5,7 +5,7 @@ a = Analysis(
     ['launcher.py'],
     pathex=[],
     binaries=[],
-    datas=[('Caddyfile', '.'), ('src', 'src'), ('main.py', '.')],
+    datas=[('Caddyfile', '.'), ('src', 'src'), ('main.py', '.'), ('static', 'static')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
