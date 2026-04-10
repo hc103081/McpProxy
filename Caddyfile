@@ -1,0 +1,3 @@
+hc103081.servehttp.com {
+    reverse_proxy localhost:8082
+}
