@@ -352,3 +352,184 @@ TypeError: Object of type MCPInitializeResult is not JSON serializable
 2026-04-10 19:51:21,706 [INFO] SSE 連線關閉: f418a9ba-5192-4f73-9e4d-c7c7541afb12
 2026-04-10 19:53:42,316 [INFO] SSE 連線關閉: d9b60178-7eb5-4b6a-93bc-85bf3bfed60d
 2026-04-10 19:55:36,517 [INFO] 新 SSE 連線建立: c3ba2810-1a07-4c94-a69a-917000bb341f
+2026-04-10 20:34:27,570 [INFO] SSE 連線關閉: c3ba2810-1a07-4c94-a69a-917000bb341f
+2026-04-10 20:34:27,696 [INFO] 正在關閉 MCP 伺服器進程...
+2026-04-10 20:34:35,211 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-10 20:34:35,211 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-10 20:34:35,243 [INFO] MCP 伺服器進程已啟動
+2026-04-10 20:34:35,247 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-10 20:34:35,600 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-10 20:34:35,699 [INFO] 正在關閉 MCP 伺服器進程...
+2026-04-10 20:34:35,713 [INFO] MCP 伺服器已關閉
+2026-04-10 20:34:45,810 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-10 20:34:45,810 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-10 20:34:45,826 [INFO] MCP 伺服器進程已啟動
+2026-04-10 20:34:45,826 [INFO] 底層 MCP 代理已初始化並啟動
+2026-04-10 20:38:51,332 [INFO] 正在關閉 MCP 伺服器進程...
+2026-04-10 20:38:55,404 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-10 20:38:55,404 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-10 20:38:55,412 [INFO] MCP 伺服器進程已啟動
+2026-04-10 20:38:55,412 [INFO] 底層 MCP 代理已初始化並啟動
+2026-04-10 21:01:36,334 [INFO] 正在關閉 MCP 伺服器進程...
+2026-04-10 21:01:40,690 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-10 21:01:40,690 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-10 21:01:40,708 [INFO] MCP 伺服器進程已啟動
+2026-04-10 21:01:40,708 [INFO] 底層 MCP 代理已初始化並啟動
+2026-04-10 21:03:07,001 [INFO] 新 SSE 連線建立: 56774f40-ca1d-41ad-99c5-ffac57b4e9c8
+2026-04-10 21:06:51,916 [INFO] 新 SSE 連線建立: fb459d24-111f-4c31-bece-dc59a266839f
+2026-04-10 21:06:52,487 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-10 21:06:52,539 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-10 21:06:53,582 [INFO] SSE 連線關閉: fb459d24-111f-4c31-bece-dc59a266839f
+2026-04-10 21:07:16,879 [INFO] 新 SSE 連線建立: 783359c9-9818-49dc-af69-e499567977a4
+2026-04-10 21:07:17,431 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-10 21:07:17,433 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-10 21:07:24,827 [INFO] SSE 連線關閉: 783359c9-9818-49dc-af69-e499567977a4
+2026-04-10 21:09:07,356 [INFO] 新 SSE 連線建立: fc2eb00a-fc68-4a35-a20d-0d7ba323c40e
+2026-04-10 21:09:07,920 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-10 21:09:07,922 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-10 21:09:09,580 [INFO] SSE 連線關閉: fc2eb00a-fc68-4a35-a20d-0d7ba323c40e
+2026-04-10 21:11:34,779 [INFO] SSE 連線關閉: 56774f40-ca1d-41ad-99c5-ffac57b4e9c8
+2026-04-10 21:13:09,057 [INFO] 正在關閉 MCP 伺服器進程...
+2026-04-10 21:13:13,171 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-10 21:13:13,173 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-10 21:13:13,187 [INFO] MCP 伺服器進程已啟動
+2026-04-10 21:13:13,187 [INFO] 底層 MCP 代理已初始化並啟動
+2026-04-10 21:14:14,506 [INFO] 新 SSE 連線建立: 372d4b31-dcd5-4053-940e-1540d8fa0f6f
+2026-04-10 21:14:15,086 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-10 21:14:15,124 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-10 21:14:22,435 [INFO] SSE 連線關閉: 372d4b31-dcd5-4053-940e-1540d8fa0f6f
+2026-04-10 21:14:38,066 [INFO] 新 SSE 連線建立: 662c2099-4c23-419b-a20b-0575faae86ca
+2026-04-10 21:14:38,618 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-10 21:14:38,619 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-10 21:14:40,338 [INFO] SSE 連線關閉: 662c2099-4c23-419b-a20b-0575faae86ca
+2026-04-10 21:14:57,674 [INFO] 新 SSE 連線建立: d2ab13ce-91f0-4916-ab9c-143d68208caf
+2026-04-10 21:14:58,229 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-10 21:14:58,231 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-10 21:14:59,200 [INFO] SSE 連線關閉: d2ab13ce-91f0-4916-ab9c-143d68208caf
+2026-04-10 21:15:04,516 [INFO] 新 SSE 連線建立: 73fb35c0-c0c5-4b4c-b361-820ef84cab81
+2026-04-10 21:15:05,073 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-10 21:15:05,074 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-10 21:15:06,482 [INFO] SSE 連線關閉: 73fb35c0-c0c5-4b4c-b361-820ef84cab81
+2026-04-10 21:15:16,655 [INFO] 新 SSE 連線建立: 3f7ffea9-28f4-47d1-943e-1023f6356e2f
+2026-04-10 21:15:17,204 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-10 21:15:17,209 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-10 21:15:24,445 [INFO] SSE 連線關閉: 3f7ffea9-28f4-47d1-943e-1023f6356e2f
+2026-04-10 21:30:39,415 [INFO] 正在關閉 MCP 伺服器進程...
+2026-04-10 21:30:53,912 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-10 21:30:53,914 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-10 21:30:53,918 [INFO] MCP 伺服器進程已啟動
+2026-04-10 21:30:53,920 [INFO] 底層 MCP 代理已初始化並啟動
+2026-04-10 21:31:48,574 [INFO] 新 SSE 連線建立: f2143faf-7096-43d9-ba6f-c4eb57cd6fc7
+2026-04-10 21:31:49,136 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-10 21:31:49,177 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-10 21:31:51,164 [INFO] SSE 連線關閉: f2143faf-7096-43d9-ba6f-c4eb57cd6fc7
+2026-04-10 21:31:54,470 [INFO] 新 SSE 連線建立: f752e852-1a18-4d5a-a256-484cac0d1930
+2026-04-10 21:31:55,032 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-10 21:31:55,033 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-10 21:31:57,061 [INFO] SSE 連線關閉: f752e852-1a18-4d5a-a256-484cac0d1930
+2026-04-10 21:32:55,585 [INFO] 新 SSE 連線建立: f374e25d-92eb-4aeb-a1b0-ed73198782b4
+2026-04-10 21:32:56,138 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-10 21:32:56,147 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-10 21:32:57,112 [INFO] SSE 連線關閉: f374e25d-92eb-4aeb-a1b0-ed73198782b4
+2026-04-10 21:48:09,674 [INFO] 正在關閉 MCP 伺服器進程...
+2026-04-10 21:48:13,331 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-10 21:48:13,331 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-10 21:48:13,351 [INFO] MCP 伺服器進程已啟動
+2026-04-10 21:48:13,351 [INFO] 底層 MCP 代理已初始化並啟動
+2026-04-10 21:48:30,440 [INFO] 新 SSE 連線建立: 0f885805-2dea-4167-aa84-792ee2fb72b0
+2026-04-10 21:48:31,001 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-10 21:48:31,041 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-10 21:48:32,075 [INFO] SSE 連線關閉: 0f885805-2dea-4167-aa84-792ee2fb72b0
+2026-04-10 21:51:25,497 [INFO] 正在關閉 MCP 伺服器進程...
+2026-04-10 21:51:35,897 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-10 21:51:35,897 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-10 21:51:35,913 [INFO] MCP 伺服器進程已啟動
+2026-04-10 21:51:35,913 [INFO] 底層 MCP 代理已初始化並啟動
+2026-04-10 21:53:51,573 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-10 21:53:51,574 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-10 21:53:51,579 [INFO] MCP 伺服器進程已啟動
+2026-04-10 21:53:51,579 [INFO] 底層 MCP 代理已初始化並啟動
+2026-04-10 21:53:57,392 [INFO] 新 SSE 連線建立: d2a88790-d710-4e83-94e3-3a8ca3379b53
+2026-04-10 21:53:59,656 [INFO] SSE 連線關閉: d2a88790-d710-4e83-94e3-3a8ca3379b53
+2026-04-10 21:54:26,776 [INFO] 新 SSE 連線建立: 02e94f6a-0220-4b1d-a970-b84369954970
+2026-04-10 21:54:27,338 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-10 21:54:27,377 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-10 21:54:28,404 [INFO] SSE 連線關閉: 02e94f6a-0220-4b1d-a970-b84369954970
+2026-04-10 21:58:30,074 [INFO] 正在關閉 MCP 伺服器進程...
+2026-04-10 21:58:37,802 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-10 21:58:37,802 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-10 21:58:37,812 [INFO] MCP 伺服器進程已啟動
+2026-04-10 21:58:37,812 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-10 21:58:38,126 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-10 21:58:38,224 [INFO] 正在關閉 MCP 伺服器進程...
+2026-04-10 21:58:38,236 [INFO] MCP 伺服器已關閉
+2026-04-10 22:00:25,296 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-10 22:00:25,297 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-10 22:00:25,305 [INFO] MCP 伺服器進程已啟動
+2026-04-10 22:00:25,307 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-10 22:00:25,613 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-10 22:00:25,683 [INFO] 正在關閉 MCP 伺服器進程...
+2026-04-10 22:00:25,693 [INFO] MCP 伺服器已關閉
+2026-04-10 22:02:31,960 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-10 22:02:31,963 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-10 22:02:31,974 [INFO] MCP 伺服器進程已啟動
+2026-04-10 22:02:31,975 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-10 22:02:32,288 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-10 22:02:32,327 [INFO] 正在關閉 MCP 伺服器進程...
+2026-04-10 22:02:32,336 [INFO] MCP 伺服器已關閉
+2026-04-10 22:04:46,734 [INFO] === MCP 自動化註冊腳本啟動 ===
+2026-04-10 22:04:46,736 [INFO] 目標執行檔存在: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-10 22:04:46,736 [INFO] 開始註冊 MCP 服務...
+2026-04-10 22:04:46,737 [INFO] 成功建立 CLSID 鍵: CLSID\{A1B2C3D4-E5F6-4A7B-8C9D-0E1F2A3B4C5D}
+2026-04-10 22:04:46,738 [INFO] 成功建立 LocalServer32 鍵: CLSID\{A1B2C3D4-E5F6-4A7B-8C9D-0E1F2A3B4C5D}\LocalServer32
+2026-04-10 22:04:46,738 [INFO] 成功建立 ProgID 鍵: DesktopControlMcp.Service
+2026-04-10 22:04:46,738 [INFO] 註冊操作完成。
+2026-04-10 22:04:46,738 [INFO] 開始驗證註冊狀態...
+2026-04-10 22:04:46,738 [INFO] 驗證成功: ProgID DesktopControlMcp.Service 正確指向 {A1B2C3D4-E5F6-4A7B-8C9D-0E1F2A3B4C5D}
+2026-04-10 22:04:46,738 [INFO] 驗證成功: LocalServer32 正確指向 C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-10 22:04:46,738 [INFO] === MCP 註冊成功且驗證通過！ ===
+2026-04-10 22:04:46,739 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-10 22:04:46,739 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-10 22:04:46,744 [INFO] MCP 伺服器進程已啟動
+2026-04-10 22:04:46,744 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-10 22:04:47,058 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-10 22:04:47,102 [INFO] 正在關閉 MCP 伺服器進程...
+2026-04-10 22:04:47,112 [INFO] MCP 伺服器已關閉
+2026-04-10 22:55:34,600 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-10 22:55:34,601 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-10 22:55:34,607 [INFO] MCP 伺服器進程已啟動
+2026-04-10 22:55:34,607 [INFO] 底層 MCP 代理已初始化並啟動
+2026-04-10 22:56:16,957 [INFO] 新 SSE 連線建立: e90f4c83-9187-446e-9cde-9fb9d020c476
+2026-04-10 22:59:59,598 [INFO] SSE 連線關閉: e90f4c83-9187-446e-9cde-9fb9d020c476
+2026-04-10 23:05:56,747 [INFO] 新 SSE 連線建立: e5418fc5-ae8d-44f0-aeba-de9dcad34e92
+2026-04-10 23:06:07,878 [INFO] 新 SSE 連線建立: 13f9442d-6969-4317-9836-7c7f7f4e46ad
+2026-04-10 23:14:28,784 [INFO] 新 SSE 連線建立: a93f6627-436d-4ace-b892-25f93820a118
+2026-04-10 23:21:21,488 [INFO] 新 SSE 連線建立: 3e789279-91b1-4388-b187-e389a2f18c7c
+2026-04-10 23:23:35,342 [INFO] 新 SSE 連線建立: 8907eaec-4aea-4eb9-8aab-8f4bccf359a4
+2026-04-10 23:25:01,496 [INFO] SSE 連線關閉: a93f6627-436d-4ace-b892-25f93820a118
+2026-04-10 23:25:01,527 [INFO] SSE 連線關閉: 3e789279-91b1-4388-b187-e389a2f18c7c
+2026-04-10 23:25:01,536 [INFO] SSE 連線關閉: 8907eaec-4aea-4eb9-8aab-8f4bccf359a4
+2026-04-10 23:42:28,844 [INFO] SSE 連線關閉: 13f9442d-6969-4317-9836-7c7f7f4e46ad
+2026-04-10 23:42:28,845 [INFO] SSE 連線關閉: e5418fc5-ae8d-44f0-aeba-de9dcad34e92
+2026-04-10 23:42:28,964 [INFO] 正在關閉 MCP 伺服器進程...
+2026-04-10 23:42:30,666 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-10 23:42:30,667 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-10 23:42:30,683 [INFO] MCP 伺服器進程已啟動
+2026-04-10 23:42:30,683 [INFO] 底層 MCP 代理已初始化並啟動
+2026-04-10 23:44:11,077 [INFO] 新 SSE 連線建立: b8ea9c25-41b8-4b3f-ad6b-3705d0b1f778
+2026-04-11 00:11:13,178 [INFO] SSE 連線關閉: b8ea9c25-41b8-4b3f-ad6b-3705d0b1f778
+2026-04-11 00:11:13,297 [INFO] 正在關閉 MCP 伺服器進程...
+2026-04-11 00:11:18,525 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-11 00:11:18,526 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-11 00:11:18,535 [INFO] MCP 伺服器進程已啟動
+2026-04-11 00:11:18,536 [INFO] 底層 MCP 代理已初始化並啟動
+2026-04-11 00:20:55,223 [INFO] 正在關閉 MCP 伺服器進程...
+2026-04-11 00:21:08,772 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-11 00:21:08,773 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-11 00:21:08,784 [INFO] MCP 伺服器進程已啟動
+2026-04-11 00:21:08,785 [INFO] 底層 MCP 代理已初始化並啟動
+2026-04-11 00:39:44,674 [INFO] 正在關閉 MCP 伺服器進程...
+2026-04-11 00:39:48,232 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-11 00:39:48,232 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-11 00:39:48,264 [INFO] MCP 伺服器進程已啟動
+2026-04-11 00:39:48,265 [INFO] 底層 MCP 代理已初始化並啟動
