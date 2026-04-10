@@ -38,12 +38,92 @@ class McpServer:
         self.proxy: Optional[McpProxy] = None
         self._setup_routes()
 
+    async def _handle_mcp_message(self, request: Request, sessionId: Optional[str] = None):
+        """
+        核心指令處理邏輯：
+        1. 解析請求體，判斷是否為 MCP JSON-RPC 格式。
+        2. 如果是 MCP 指令 $\rightarrow$ 處理並根據 sessionId 決定回傳方式 (SSE 隊列 或 直接 HTTP 回傳)。
+        3. 如果不是 MCP 指令 $\rightarrow$ 回傳基礎健康檢查狀態。
+        """
+        try:
+            body = await request.json()
+        except Exception:
+            return {"status": "ok", "message": "Endpoint active (non-JSON request)"}
+
+        # 檢查是否符合 MCP JSON-RPC 規範
+        is_mcp_request = isinstance(body, dict) and "jsonrpc" in body and "method" in body
+        
+        if not is_mcp_request:
+            return {"status": "ok", "message": "SSE endpoint is active"}
+
+        # 處理 MCP 指令
+        try:
+            mcp_msg = McpMessage(**body)
+            result = None
+            if mcp_msg.method == "initialize":
+                res = await self.proxy.client.initialize()
+                result = res.model_dump() if hasattr(res, 'model_dump') else res
+            elif mcp_msg.method == "tools/list":
+                res = await self.proxy.get_available_tools()
+                result = {"tools": res}
+            elif mcp_msg.method == "tools/call":
+                params = mcp_msg.params or {}
+                name = params.get("name")
+                args = params.get("arguments", {})
+                if not name:
+                    raise ValueError("Missing tool name in params")
+                
+                res = await self.proxy.execute_tool(name, args)
+                result = res.model_dump() if hasattr(res, 'model_dump') else res
+            else:
+                result = {"error": {"code": -32601, "message": f"Method {mcp_msg.method} not implemented"}}
+
+            response = {
+                "jsonrpc": "2.0",
+                "id": mcp_msg.id,
+                "result": result
+            } if "error" not in str(result) else result
+
+            # --- 關鍵邏輯：決定回傳路徑 ---
+            if sessionId and sessionId in session_queues:
+                # 有有效 Session $\rightarrow$ 走 SSE 隊列 (標準流程)
+                import json
+                await session_queues[sessionId].put(json.dumps(response))
+                return {"status": "accepted"}
+            else:
+                # 無 Session $\rightarrow$ 直接回傳結果 (滿足 Open WebUI 初始握手)
+                logger.info(f"無 SessionId，直接回傳 MCP 結果給客戶端 (Method: {mcp_msg.method})")
+                return response
+
+        except McpProxyError as e:
+            error_resp = {"jsonrpc": "2.0", "id": getattr(body, 'get', lambda x: None)('id'), "error": {"code": -32000, "message": str(e)}}
+            if sessionId and sessionId in session_queues:
+                import json
+                await session_queues[sessionId].put(json.dumps(error_resp))
+                return {"status": "error", "detail": str(e)}
+            return error_resp
+        except Exception as e:
+            logger.exception(f"處理 MCP 訊息時發生錯誤: {e}")
+            error_resp = {"jsonrpc": "2.0", "id": getattr(body, 'get', lambda x: None)('id'), "error": {"code": -32603, "message": "Internal error"}}
+            if sessionId and sessionId in session_queues:
+                import json
+                await session_queues[sessionId].put(json.dumps(error_resp))
+                return {"status": "error", "detail": "Internal server error"}
+            return error_resp
+
     def _setup_routes(self):
-        @self.app.get("/sse")
+        @self.app.api_route("/sse", methods=["GET", "POST"])
         async def sse_endpoint(request: Request):
             """
             建立 SSE 連線，並告知客戶端發送訊息的端點。
+            同時支持 POST 請求以兼容某些客戶端的連線檢查或指令發送。
             """
+            if request.method == "POST":
+                # 無論是否有 sessionId，都交由 _handle_mcp_message 判斷
+                # 如果是 MCP 指令則處理，如果只是健康檢查則回傳 ok
+                session_id = request.query_params.get("sessionId")
+                return await self._handle_mcp_message(request, session_id)
+
             session_id = str(uuid.uuid4())
             queue = asyncio.Queue()
             session_queues[session_id] = queue
@@ -52,26 +132,22 @@ class McpServer:
 
             async def event_generator():
                 try:
-                    # 1. 根據 MCP 規範，首先發送 endpoint 事件
                     yield {
                         "event": "endpoint",
                         "data": f"/messages?sessionId={session_id}"
                     }
                     
-                    # 2. 持續監聽隊列，並定期發送心跳以維持連線
                     while True:
                         if await request.is_disconnected():
                             break
                         
                         try:
-                            # 等待訊息，但設置超時以發送心跳
                             data = await asyncio.wait_for(queue.get(), timeout=15.0)
                             yield {
                                 "event": "message",
                                 "data": data
                             }
                         except asyncio.TimeoutError:
-                            # 發送心跳包 (空註釋)，防止隧道工具因閒置而切斷連線
                             yield {
                                 "event": "ping",
                                 "data": "keep-alive"
@@ -85,7 +161,7 @@ class McpServer:
                 headers={
                     "Cache-Control": "no-cache",
                     "Connection": "keep-alive",
-                    "X-Accel-Buffering": "no", # 禁用 Nginx/Caddy 緩衝
+                    "X-Accel-Buffering": "no",
                 }
             )
 
@@ -97,64 +173,7 @@ class McpServer:
             if sessionId not in session_queues:
                 raise HTTPException(status_code=404, detail="Session not found")
 
-            try:
-                body = await request.json()
-                mcp_msg = McpMessage(**body)
-            except Exception as e:
-                raise HTTPException(status_code=400, detail=f"Invalid JSON-RPC request: {str(e)}")
-
-            try:
-                result = None
-                if mcp_msg.method == "initialize":
-                    res = await self.proxy.client.initialize()
-                    result = res.model_dump() if hasattr(res, 'model_dump') else res
-                elif mcp_msg.method == "tools/list":
-                    res = await self.proxy.get_available_tools()
-                    # get_available_tools 已經回傳 list[dict]，直接使用
-                    result = {"tools": res}
-                elif mcp_msg.method == "tools/call":
-                    params = mcp_msg.params or {}
-                    name = params.get("name")
-                    args = params.get("arguments", {})
-                    if not name:
-                        raise ValueError("Missing tool name in params")
-                    
-                    res = await self.proxy.execute_tool(name, args)
-                    result = res.model_dump() if hasattr(res, 'model_dump') else res
-                else:
-                    result = {"error": {"code": -32601, "message": f"Method {mcp_msg.method} not implemented"}}
-
-                # 確保 result 是可序列化的
-                response = {
-                    "jsonrpc": "2.0",
-                    "id": mcp_msg.id,
-                    "result": result
-                } if "error" not in str(result) else result
-                
-                import json
-                await session_queues[sessionId].put(json.dumps(response))
-                
-                return {"status": "accepted"}
-
-            except McpProxyError as e:
-                import json
-                error_resp = {
-                    "jsonrpc": "2.0",
-                    "id": mcp_msg.id,
-                    "error": {"code": -32000, "message": str(e)}
-                }
-                await session_queues[sessionId].put(json.dumps(error_resp))
-                return {"status": "error", "detail": str(e)}
-            except Exception as e:
-                logger.exception(f"處理訊息時發生未預期錯誤: {e}")
-                import json
-                error_resp = {
-                    "jsonrpc": "2.0",
-                    "id": mcp_msg.id,
-                    "error": {"code": -32603, "message": "Internal error"}
-                }
-                await session_queues[sessionId].put(json.dumps(error_resp))
-                return {"status": "error", "detail": "Internal server error"}
+            return await self._handle_mcp_message(request, sessionId)
 
     async def start_proxy(self):
         """初始化底層 MCP 代理"""

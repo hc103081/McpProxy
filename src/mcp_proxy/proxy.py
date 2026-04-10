@@ -66,32 +66,21 @@ class McpProxy:
             # 將 Pydantic 模型轉換為字典
             res_dict = result.model_dump() if hasattr(result, 'model_dump') else result
             
-            # 1. 檢查是否為截圖結果 (包含 path 鍵且為圖片文件)
-            if isinstance(res_dict, dict) and "path" in res_dict:
-                return self._handle_image_result(res_dict)
+            # --- 強化版：全域路徑掃描觸發機制 ---
+            # 將整個結果轉換為字串，檢查是否包含任何路徑模式 (支持絕對路徑與圖片後綴的相對路徑)
+            result_str = str(res_dict)
+            path_match = re.search(r'([a-zA-Z]:\\[^"\'\s]+|[/\w\.-]+/[^"\'\s]+|[\w\.-]+\.(?:png|jpg|jpeg))', result_str)
             
-            # 2. 檢查是否為「非標準」的截圖結果 (路徑藏在文字中)
-            if isinstance(res_dict, dict) and res_dict.get("isError") is False:
-                if "content" in res_dict and isinstance(res_dict["content"], list):
-                    for item in res_dict["content"]:
-                        if item.get("type") == "text":
-                            text_val = item.get("text", "")
-                            # 嘗試從文字中提取路徑
-                            path_match = re.search(r'([a-zA-Z]:\\[^"\'\s]+|[/\w\.-]+/[^"\'\s]+)', text_val)
-                            if path_match:
-                                extracted_path = path_match.group(1)
-                                logger.info(f"從文字內容中成功提取路徑: {extracted_path}")
-                                # 構造一個模擬的 res_dict 來觸發 _handle_image_result
-                                mock_res = res_dict.copy()
-                                mock_res["path"] = extracted_path
-                                return self._handle_image_result(mock_res)
-
-            # 3. 確保所有結果都符合 MCP 的 content 格式
-            # 如果結果已經包含 content 陣列，直接回傳
+            if path_match:
+                extracted_path = path_match.group(1)
+                logger.info(f"🚨 [全域掃描] 在結果中發現潛在路徑: {extracted_path}")
+                # 構造一個統一的格式交給 _handle_image_result 處理
+                return self._handle_image_result({"path": extracted_path})
+            
+            # 如果沒有發現路徑，則走原有的格式化流程
             if isinstance(res_dict, dict) and "content" in res_dict:
                 return res_dict
                 
-            # 否則，將結果封裝在 text content 中
             return {
                 "content": [
                     {
@@ -240,6 +229,13 @@ class McpProxy:
                 encoded_string = base64.b64encode(file_data).decode("utf-8")
             
             logger.info(f"圖片轉換成功: {actual_path} | 大小: {len(file_data)} bytes")
+            
+            # 轉換完成後立即刪除臨時圖片文件，防止資料夾被佔滿
+            try:
+                os.remove(actual_path)
+                logger.info(f"已清理臨時圖片文件: {actual_path}")
+            except Exception as e:
+                logger.warning(f"清理臨時圖片文件失敗: {e}")
             
             return {
                 "content": [

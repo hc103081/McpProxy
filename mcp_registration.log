@@ -533,3 +533,288 @@ TypeError: Object of type MCPInitializeResult is not JSON serializable
 2026-04-11 00:39:48,232 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
 2026-04-11 00:39:48,264 [INFO] MCP 伺服器進程已啟動
 2026-04-11 00:39:48,265 [INFO] 底層 MCP 代理已初始化並啟動
+2026-04-11 00:44:32,219 [INFO] 正在關閉 MCP 伺服器進程...
+2026-04-11 00:44:34,368 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-11 00:44:34,369 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-11 00:44:34,386 [INFO] MCP 伺服器進程已啟動
+2026-04-11 00:44:34,387 [INFO] 底層 MCP 代理已初始化並啟動
+2026-04-11 00:50:21,321 [INFO] 正在關閉 MCP 伺服器進程...
+2026-04-11 00:50:24,108 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-11 00:50:24,110 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-11 00:50:24,121 [INFO] MCP 伺服器進程已啟動
+2026-04-11 00:50:24,123 [INFO] 底層 MCP 代理已初始化並啟動
+2026-04-11 00:58:24,114 [INFO] 正在關閉 MCP 伺服器進程...
+2026-04-11 00:58:26,116 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-11 00:58:26,117 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-11 00:58:26,127 [INFO] MCP 伺服器進程已啟動
+2026-04-11 00:58:26,133 [INFO] 底層 MCP 代理已初始化並啟動
+2026-04-11 00:58:29,510 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 00:58:29,567 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 00:58:29,570 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 00:58:29,697 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 00:58:29,770 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 00:59:04,412 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 00:59:04,416 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 00:59:04,420 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 00:59:04,438 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 00:59:04,510 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:00:48,255 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:00:48,257 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:00:48,257 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:00:48,263 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:00:48,309 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:01:02,864 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 01:02:08,193 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:02:08,197 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:02:08,197 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:02:08,205 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:02:08,254 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:03:27,695 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:03:27,700 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:03:27,701 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:03:27,709 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:03:27,755 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:07:24,983 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:07:24,988 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:07:24,988 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:07:24,996 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:07:25,048 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:08:47,697 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:08:47,701 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:08:47,703 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:08:47,710 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:08:47,759 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:09:14,667 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 01:10:11,520 [INFO] 正在關閉 MCP 伺服器進程...
+2026-04-11 01:10:13,825 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-11 01:10:13,828 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-11 01:10:13,839 [INFO] MCP 伺服器進程已啟動
+2026-04-11 01:10:13,839 [INFO] 底層 MCP 代理已初始化並啟動
+2026-04-11 01:10:27,685 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:10:27,770 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:10:27,773 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:10:27,806 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:10:28,222 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:10:37,840 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 01:11:34,434 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:11:34,441 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:11:34,441 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:11:34,452 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:11:34,518 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:11:54,515 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 01:15:02,100 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:15:02,102 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:15:02,102 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:15:02,110 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:15:02,152 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:15:31,634 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 01:19:46,586 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:19:46,588 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:19:46,589 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:19:46,599 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:19:46,647 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:27:07,216 [INFO] 正在關閉 MCP 伺服器進程...
+2026-04-11 01:27:09,953 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-11 01:27:09,954 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-11 01:27:09,967 [INFO] MCP 伺服器進程已啟動
+2026-04-11 01:27:09,971 [INFO] 底層 MCP 代理已初始化並啟動
+2026-04-11 01:27:22,456 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:27:22,530 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:27:22,532 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:27:22,559 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:27:22,619 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:27:32,459 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 01:30:04,044 [INFO] 正在關閉 MCP 伺服器進程...
+2026-04-11 01:30:06,122 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-11 01:30:06,123 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-11 01:30:06,135 [INFO] MCP 伺服器進程已啟動
+2026-04-11 01:30:06,135 [INFO] 底層 MCP 代理已初始化並啟動
+2026-04-11 01:30:10,957 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:30:11,030 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:30:11,031 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:30:11,094 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:30:11,393 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:30:22,804 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 01:32:24,752 [INFO] 正在關閉 MCP 伺服器進程...
+2026-04-11 01:32:31,611 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-11 01:32:31,619 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-11 01:32:31,630 [INFO] MCP 伺服器進程已啟動
+2026-04-11 01:32:31,630 [INFO] 底層 MCP 代理已初始化並啟動
+2026-04-11 01:32:36,145 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:32:36,241 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:32:36,241 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:32:36,250 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:32:36,327 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:33:04,554 [INFO] 🚨 [全域掃描] 在結果中發現潛在路徑: test_screenshot.png
+2026-04-11 01:33:04,625 [INFO] 成功定位圖片文件: test_screenshot.png (MIME: image/png)
+2026-04-11 01:33:04,635 [INFO] 圖片轉換成功: test_screenshot.png | 大小: 290279 bytes
+2026-04-11 01:33:04,639 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 01:33:10,861 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 01:33:48,703 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:33:48,705 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:33:48,706 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:33:48,712 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:33:48,761 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:34:25,620 [INFO] 🚨 [全域掃描] 在結果中發現潛在路徑: vision_test.png
+2026-04-11 01:34:25,620 [INFO] 成功定位圖片文件: vision_test.png (MIME: image/png)
+2026-04-11 01:34:25,626 [INFO] 圖片轉換成功: vision_test.png | 大小: 306534 bytes
+2026-04-11 01:34:25,629 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 01:36:14,718 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:36:14,719 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:36:14,719 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:36:14,726 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:36:14,776 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:36:31,487 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 01:36:31,570 [INFO] 🚨 [全域掃描] 在結果中發現潛在路徑: current_screen.png
+2026-04-11 01:36:31,571 [INFO] 成功定位圖片文件: current_screen.png (MIME: image/png)
+2026-04-11 01:36:31,578 [INFO] 圖片轉換成功: current_screen.png | 大小: 307057 bytes
+2026-04-11 01:36:31,581 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 01:38:19,098 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:38:19,103 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:38:19,103 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:38:19,129 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:38:19,189 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:42:40,774 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:42:40,792 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:42:40,792 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:42:40,803 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:42:40,870 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:42:57,563 [INFO] 🚨 [全域掃描] 在結果中發現潛在路徑: vision_test.png
+2026-04-11 01:42:57,570 [INFO] 成功定位圖片文件: vision_test.png (MIME: image/png)
+2026-04-11 01:42:57,627 [INFO] 圖片轉換成功: vision_test.png | 大小: 1971030 bytes
+2026-04-11 01:42:57,694 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 01:44:09,894 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:44:09,906 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:44:09,906 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:44:09,922 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:44:10,644 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:44:33,160 [INFO] 🚨 [全域掃描] 在結果中發現潛在路徑: current_view.png
+2026-04-11 01:44:33,161 [INFO] 成功定位圖片文件: current_view.png (MIME: image/png)
+2026-04-11 01:44:33,171 [INFO] 圖片轉換成功: current_view.png | 大小: 399544 bytes
+2026-04-11 01:44:33,180 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 01:45:15,362 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:45:15,419 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:45:15,421 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:45:15,441 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:45:15,760 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:45:45,581 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 01:45:45,870 [INFO] 🚨 [全域掃描] 在結果中發現潛在路徑: current_view_updated.png
+2026-04-11 01:45:45,871 [INFO] 成功定位圖片文件: current_view_updated.png (MIME: image/png)
+2026-04-11 01:45:45,902 [INFO] 圖片轉換成功: current_view_updated.png | 大小: 3786931 bytes
+2026-04-11 01:45:45,954 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 01:46:38,638 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:46:38,641 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:46:38,642 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:46:38,664 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:46:38,732 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:46:55,386 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 01:47:40,221 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:47:40,224 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:47:40,224 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:47:40,233 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:47:40,312 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:48:14,951 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 01:48:21,020 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 01:49:27,228 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:49:27,231 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:49:27,232 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:49:27,253 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:49:27,336 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:49:49,575 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 01:51:52,717 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:51:52,723 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:51:52,723 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:51:52,730 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:51:52,787 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:53:09,690 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:53:09,692 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:53:09,692 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:53:09,701 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:53:09,770 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:53:28,307 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 01:54:27,350 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:54:27,351 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:54:27,351 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:54:27,358 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:54:27,409 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:54:48,700 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 01:54:48,815 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 01:56:16,197 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:56:16,204 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:56:16,204 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:56:16,216 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:56:16,266 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 01:56:46,323 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 01:56:47,856 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 01:57:25,040 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 01:57:25,044 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 01:57:25,045 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 01:57:25,053 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 01:57:25,098 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 02:03:46,828 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 02:03:46,910 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 02:03:46,911 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 02:03:46,978 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 02:03:47,059 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 02:08:46,875 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 02:08:46,882 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 02:08:46,883 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 02:08:46,896 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 02:08:46,956 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 02:09:02,820 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 02:09:02,825 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 02:09:02,826 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 02:09:02,840 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 02:09:02,912 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 02:10:25,859 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 02:10:25,865 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 02:10:25,866 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 02:10:25,878 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 02:10:25,938 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 02:11:36,861 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 02:11:36,867 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 02:11:36,867 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 02:11:36,877 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 02:11:36,928 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 02:11:56,523 [INFO] 🚨 [全域掃描] 在結果中發現潛在路徑: desktop_screenshot.png
+2026-04-11 02:11:56,531 [INFO] 成功定位圖片文件: desktop_screenshot.png (MIME: image/png)
+2026-04-11 02:11:56,557 [INFO] 圖片轉換成功: desktop_screenshot.png | 大小: 2588537 bytes
+2026-04-11 02:11:56,588 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 02:12:05,547 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/call)
+2026-04-11 02:12:35,321 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 02:12:35,330 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 02:12:35,330 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 02:12:35,349 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 02:12:35,481 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 02:14:57,292 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 02:14:57,312 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 02:14:57,312 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 02:15:06,293 [INFO] 正在執行 Stdio 初始化握手...
+2026-04-11 02:15:06,302 [INFO] Stdio MCP 初始化成功。伺服器版本: 2024-11-05
+2026-04-11 02:15:06,302 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: initialize)
+2026-04-11 02:15:06,550 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: notifications/initialized)
+2026-04-11 02:15:07,144 [WARNING] 跳過無效 JSON 行: {"result":{"tools":[{"name":"screenshot_window","description":"Capture a specific window by title using PrintWindow API. Works even when the window is partially obscured by other windows. Optionally resizes to AI-readable dimensions with coordinate mapping.","inputSchema":{"type":"object","properties":{"windowTitle":{"description":"Part of window title to capture (case-insensitive)","type":"string"},"savePath":{"description":"File path to save the PNG screenshot","type":"string"},"maxWidth":{"description":"Max width of output image (default 1920, 0=no resize)","type":"integer","default":1920}},"required":["windowTitle","savePath"]}},{"name":"get_window_details","description":"Get window\u0027s UI elements. Use kind filter (input/button/tab-item/text) to reduce output.","inputSchema":{"type":"object","properties":{"windowLabel":{"description":"Part of window title (case-insensitive)","type":"string"},"kindFilter":{"description":"Filter by kind: input, button, tab-item, text, link, checkbox","type":"string","default":""},"limit":{"description":"Max elements (default 30)","type":"integer","default":30}},"required":["windowLabel"]}},{"name":"get_screen_info","description":"Get information about all connected monitors (position, size, primary status).","inputSchema":{"type":"object","properties":{}}},{"name":"screenshot_region","description":"Take a screenshot of a specific screen region and save to file.","inputSchema":{"type":"object","properties":{"x":{"description":"Left edge X coordinate","type":"integer"},"y":{"description":"Top edge Y coordinate","type":"integer"},"width":{"description":"Width of capture region","type":"integer"},"height":{"description":"Height of capture region","type":"integer"},"savePath":{"description":"File path to save the PNG screenshot","type":"string"}},"required":["x","y","width","height","savePath"]}},{"name":"open_app","description":"Open an app by name. Tries: 1) focus existing window, 2) click taskbar icon, 3) Windows search.","inputSchema":{"type":"object","properties":{"appName":{"description":"App name to open (e.g. \u0027Telegram\u0027, \u0027Spotify\u0027, \u0027Chrome\u0027)","type":"string"}},"required":["appName"]}},{"name":"keyboard_key_up","description":"Release a held key.","inputSchema":{"type":"object","properties":{"key":{"description":"Key name to release","type":"string"}},"required":["key"]}},{"name":"ocr_window","description":"Run OCR on an entire window. Auto-enhances dark themes. Returns all visible text with click coordinates.","inputSchema":{"type":"object","properties":{"windowTitle":{"description":"Part of window title (case-insensitive)","type":"string"},"language":{"description":"Language code (default: en)","type":"string","default":"en"}},"required":["windowTitle"]}},{"name":"restore_window","description":"Restore a minimized/maximized window to normal size.","inputSchema":{"type":"object","properties":{"windowTitle":{"description":"Part of the window title (case-insensitive)","type":"string"}},"required":["windowTitle"]}},{"name":"paste_text","description":"Set clipboard to the given text and paste via Ctrl\u002BV. Reliable for large text like XML, code, or multi-line content that keyboard_type can\u0027t handle.","inputSchema":{"type":"object","properties":{"text":{"description":"Text to paste","type":"string"}},"required":["text"]}},{"name":"keyboard_key_down","description":"Press and hold a key without releasing. Use keyboard_key_up to release.","inputSchema":{"type":"object","properties":{"key":{"description":"Key name to hold","type":"string"}},"required":["key"]}},{"name":"set_clipboard","description":"Set the system clipboard text without pasting. Useful for preparing large text (XML, code, JSON) to paste manually or with Ctrl\u002BV.","inputSchema":{"type":"object","properties":{"text":{"description":"Text to put on clipboard","type":"string"}},"required":["text"]}},{"name":"scan_desktop","description":"Full desktop scan: screens, windows (with visibility %), UI elements, desktop regions, taskbar. Returns compact plain text.","inputSchema":{"type":"object","properties":{}}},{"name":"focus_and_hotkey","description":"Click at coordinates to ensure focus (e.g. inside an iframe), wait, then send a keyboard shortcut. Solves iframe/web app focus issues where separate click \u002B hotkey calls fail.","inputSchema":{"type":"object","properties":{"x":{"description":"X coordinate to click for focus","type":"integer"},"y":{"description":"Y coordinate to click for focus","type":"integer"},"key1":{"description":"First key (e.g. ctrl, alt, shift)","type":"string"},"key2":{"description":"Second key","type":"string","default":""},"key3":{"description":"Optional third key","type":"string","default":""},"key4":{"description":"Optional fourth key","type":"string","default":""},"delayMs":{"description":"Delay in ms between click and hotkey (default 200, range 50-2000)","type":"integer","default":200}},"required":["x","y","key1"]}},{"name":"type_in_element","description":"Find input element and type text. Tries ValuePattern, then clipboard paste, then click\u002Btype.","inputSchema":{"type":"object","properties":{"elementText":{"description":"Text/label of input to find","type":"string"},"value":{"description":"Text to type","type":"string"},"windowLabel":{"description":"Limit to window","type":"string","default":""}},"required":["elementText","value"]}},{"name":"mouse_move","description":"Move the mouse cursor to absolute screen coordinates. Works across all monitors.","inputSchema":{"type":"object","properties":{"x":{"description":"X coordinate (can be negative for left-side monitors)","type":"integer"},"y":{"description":"Y coordinate","type":"integer"}},"required":["x","y"]}},{"name":"maximize_window","description":"Maximize a window by title.","inputSchema":{"type":"object","properties":{"windowTitle":{"description":"Part of the window title (case-insensitive)","type":"string"}},"required":["windowTitle"]}},{"name":"run_sequence","description":"Execute multiple UI actions in a single call. Massively faster than individual tool calls. Each line is one action. Actions:\n  click \u0022text\u0022           \u2014 click element by text (UIAutomation \u002B OCR fallback)\n  click x,y              \u2014 click at screen coordinates\n  doubleclick x,y        \u2014 double-click at coordinates\n  type \u0022text\u0022            \u2014 type text via keyboard\n  paste \u0022text\u0022           \u2014 paste via clipboard (for large/XML text)\n  hotkey ctrl\u002Ba          \u2014 press key combination\n  wait 500               \u2014 wait N milliseconds\n  focus \u0022window title\u0022   \u2014 focus a window\n  tab \u0022tab text\u0022         \u2014 select a browser tab\n  ocr_click \u0022text\u0022       \u2014 find text via OCR and click it (skips UIAutomation)\n  screenshot \u0022path\u0022      \u2014 take screenshot of focused window\nExample: focus \u0022Chrome\u0022\\nwait 300\\nclick \u0022Extras\u0022\\nwait 500\\nclick \u0022Edit Diagram\u0022","inputSchema":{"type":"object","properties":{"actions":{"description":"Actions to execute, one per line","type":"string"},"windowTitle":{"description":"Window to focus before starting (optional)","type":"string","default":""}},"required":["actions"]}},{"name":"ocr_find_text","description":"Use OCR to find specific text on screen and return its click coordinates. Auto-enhances dark themes.","inputSchema":{"type":"object","properties":{"searchText":{"description":"Text to search for (case-insensitive)","type":"string"},"x":{"description":"Left edge X of search region","type":"integer"},"y":{"description":"Top edge Y of search region","type":"integer"},"width":{"description":"Width of search region","type":"integer"},"height":{"description":"Height of search region","type":"integer"},"language":{"description":"Language code (default: en)","type":"string","default":"en"}},"required":["searchText","x","y","width","height"]}},{"name":"mouse_scroll","description":"Scroll the mouse wheel. Positive = up, negative = down.","inputSchema":{"type":"object","properties":{"amount":{"description":"Scroll increments (positive=up, negative=down)","type":"integer"},"x":{"description":"Optional X coordinate","type":["integer","null"],"default":null},"y":{"description":"Optional Y coordinate","type":["integer","null"],"default":null}},"required":["amount"]}},{"name":"analyze_desktop","description":"Analyze desktop layout: which windows are truly visible vs occluded (hidden behind others), and which screen areas show the desktop background (no window covering them). Useful for understanding the real state of the user\u0027s screen.","inputSchema":{"type":"object","properties":{}}},{"name":"click_element","description":"Find element by text and click it. Tries UIAutomation first (reliable, pattern-based), then falls back to OCR text detection (works on web apps, dark themes, iframes). Returns what was clicked and the method used.","inputSchema":{"type":"object","properties":{"text":{"description":"Text/label to click","type":"string"},"windowLabel":{"description":"Limit to window","type":"string","default":""}},"required":["text"]}},{"name":"keyboard_press","description":"Press and release a single key.","inputSchema":{"type":"object","properties":{"key":{"description":"Key name: enter, tab, escape, space, backspace, delete, up, down, left, right, home, end, pageup, pagedown, f1-f12, a-z, 0-9","type":"string"}},"required":["key"]}},{"name":"wait_seconds","description":"Pause for a number of seconds (max 30). Useful between actions.","inputSchema":{"type":"object","properties":{"seconds":{"description":"Seconds to wait","type":"number"}},"required":["seconds"]}},{"name":"auto_scroll","description":"Scroll a window automatically with pauses between scrolls. Great for reading.","inputSchema":{"type":"object","properties":{"times":{"description":"Number of scroll batches","type":"integer","default":5},"pauseSeconds":{"description":"Seconds to pause between each scroll","type":"number","default":4},"amount":{"description":"Scroll amount per batch (negative=down, positive=up)","type":"integer","default":-3},"windowTitle":{"description":"Optional window title to focus first","type":"string","default":""}}}},{"name":"read_window_text","description":"Read all visible text from a window. Great for reading web pages, emails, documents.","inputSchema":{"type":"object","properties":{"windowLabel":{"description":"Window title","type":"string"},"limit":{"description":"Max text items (default 50)","type":"integer","default":50}},"required":["windowLabel"]}},{"name":"mouse_move_smooth","description":"Move mouse smoothly from current position to target over a duration. Keeps menus and submenus open by following a natural path instead of teleporting.","inputSchema":{"type":"object","properties":{"x":{"description":"Target X coordinate","type":"integer"},"y":{"description":"Target Y coordinate","type":"integer"},"durationMs":{"description":"Duration in milliseconds (default 300, range 50-2000)","type":"integer","default":300}},"required":["x","y"]}},{"name":"focus_window","description":"Bring a window to the foreground by title.","inputSchema":{"type":"object","properties":{"windowTitle":{"description":"Part of window title (case-insensitive)","type":"string"}},"required":["windowTitle"]}},{"name":"find_element","description":"Find UI element by text. Returns click coordinates.","inputSchema":{"type":"object","properties":{"text":{"description":"Text to search (case-insensitive)","type":"string"},"windowLabel":{"description":"Limit to window (title or process)","type":"string","default":""},"limit":{"description":"Max results (default 5)","type":"integer","default":5}},"required":["text"]}},{"name":"list_windows","description":"List visible windows with titles, process names, and visibility percentage (occlusion detection).","inputSchema":{"type":"object","properties":{}}},{"name":"click_and_type","description":"Click at a position then type text. Useful for filling input fields. Automatically focuses the window first.","inputSchema":{"type":"object","properties":{"x":{"description":"X coordinate to click","type":"integer"},"y":{"description":"Y coordinate to click","type":"integer"},"text":{"description":"Text to type after clicking","type":"string"},"clearFirst":{"description":"If true, clears the field (Ctrl\u002BA, Delete) before typing","type":"boolean","default":false}},"required":["x","y","text"]}},{"name":"mouse_click","description":"Click the mouse at the given screen coordinates. Automatically focuses the window at that position first.","inputSchema":{"type":"object","properties":{"x":{"description":"X coordinate to click","type":"integer"},"y":{"description":"Y coordinate to click","type":"integer"},"button":{"description":"Mouse button: left, right, or middle","type":"string","default":"left"},"clicks":{"description":"Number of clicks (1=single, 2=double)","type":"integer","default":1}},"required":["x","y"]}},{"name":"wait_for_element","description":"Poll for a UI element to appear by text with configurable timeout. Useful after actions that trigger dialogs, menus, or page loads.","inputSchema":{"type":"object","properties":{"text":{"description":"Element text to search for","type":"string"},"windowTitle":{"description":"Optional window filter","type":"string","default":""},"timeoutSeconds":{"description":"Timeout in seconds (default 5, max 30)","type":"number","default":5},"pollIntervalMs":{"description":"Poll interval in ms (default 500)","type":"number","default":500}},"required":["text"]}},{"name":"interact","description":"Smart interaction: finds element, auto-detects type (button\u2192click, input\u2192type, tab\u2192select, checkbox\u2192toggle). One tool for all interactions.","inputSchema":{"type":"object","properties":{"elementText":{"description":"Text/label of element","type":"string"},"value":{"description":"Value to type (for inputs). Leave empty for buttons/tabs.","type":"string","default":""},"windowLabel":{"description":"Limit to window","type":"string","default":""}},"required":["elementText"]}},{"name":"select_tab","description":"Select a browser tab by text via UIAutomation.","inputSchema":{"type":"object","properties":{"tabText":{"description":"Tab text","type":"string"},"windowLabel":{"description":"Limit to window","type":"string","default":""}},"required":["tabText"]}},{"name":"keyboard_hotkey","description":"Press a keyboard shortcut (key combination like Ctrl\u002BC).","inputSchema":{"type":"object","properties":{"key1":{"description":"First key (e.g. ctrl, alt, shift, win)","type":"string"},"key2":{"description":"Second key (e.g. c, v, tab)","type":"string","default":""},"key3":{"description":"Optional third key","type":"string","default":""},"key4":{"description":"Optional fourth key","type":"string","default":""}},"required":["key1"]}},{"name":"navigate_to_url","description":"Navigate browser to a URL: focuses Chrome, types URL in address bar, presses Enter.","inputSchema":{"type":"object","properties":{"url":{"description":"URL to navigate to","type":"string"},"windowTitle":{"description":"Optional - browser window title to target (default: Chrome)","type":"string","default":"Chrome"}},"required":["url"]}},{"name":"ocr_screen_region","description":"Capture a screen region and run Windows OCR on it. Returns recognized text with positions. Auto-enhances dark themes. Works on any app including custom-rendered UIs.","inputSchema":{"type":"object","properties":{"x":{"description":"Left edge X coordinate","type":"integer"},"y":{"description":"Top edge Y coordinate","type":"integer"},"width":{"description":"Width of capture region","type":"integer"},"height":{"description":"Height of capture region","type":"integer"},"language":{"description":"Language code (default: en, options: en, el, de, fr, es, it, etc.)","type":"string","default":"en"}},"required":["x","y","width","height"]}},{"name":"screenshot_to_file","description":"Take a full screenshot across all monitors and save to a PNG file.","inputSchema":{"type":"object","properties":{"savePath":{"description":"File path to save the PNG screenshot","type":"string"}},"required":["savePath"]}},{"name":"screenshot_annotated","description":"Screenshot a window with colored bounding boxes drawn around all detected UI elements. Resizes to AI-readable dimensions and returns a scale factor for coordinate mapping. Use: real_x = region_x \u002B (image_x * scale), real_y = region_y \u002B (image_y * scale). Colors: green=button, blue=input, orange=tab, cyan=link, pink=checkbox, red=menu-item, gray=text.","inputSchema":{"type":"object","properties":{"windowTitle":{"description":"Part of window title to capture (case-insensitive)","type":"string"},"savePath":{"description":"File path to save annotated PNG","type":"string"},"maxWidth":{"description":"Max width of output image for AI readability (default 1920)","type":"integer","default":1920},"kindFilter":{"description":"Filter by element kind (empty=all). Options: button, input, text, link, tab-item, checkbox","type":"string","default":""},"showLabels":{"description":"Draw text labels on boxes (default true)","type":"boolean","default":true}},"required":["windowTitle","savePath"]}},{"name":"keyboard_type","description":"Type text using the keyboard. Supports Unicode.","inputSchema":{"type":"object","properties":{"text":{"description":"The text to type","type":"string"}},"required":["text"]}},{"name":"refresh_window","description":"Re-scan only one window\u0027s elements (faster than full scan_desktop).","inputSchema":{"type":"object","properties":{"windowTitle":{"description":"Window title to re-scan","type":"string"}},"required":["windowTitle"]}},{"name":"click_menu_item","description":"Navigate a menu: click parent item, smoothly move to child item, click it. Uses smooth mouse movement to keep submenus open. Single tool call for web-rendered menus.","inputSchema":{"type":"object","properties":{"parentText":{"description":"Text of parent menu to click first","type":"string"},"childText":{"description":"Text of child/submenu item to click","type":"string"},"windowTitle":{"description":"Optional window filter","type":"string","default":""},"waitMs":{"description":"Wait ms for submenu to appear (default 600)","type":"integer","default":600}},"required":["parentText","childText"]}},{"name":"fill_form","description":"Fill multiple form fields in one call. Provide field:value pairs as JSON object.","inputSchema":{"type":"object","properties":{"fieldsJson":{"description":"JSON object of field:value pairs, e.g. {\u0022Email\u0022:\u0022user@test.com\u0022,\u0022Password\u0022:\u0022123\u0022}","type":"string"},"windowLabel":{"description":"Limit to window","type":"string","default":""}},"required":["fieldsJson"]}},{"name":"mouse_drag","description":"Drag the mouse from one position to another.","inputSchema":{"type":"object","properties":{"startX":{"description":"Starting X","type":"integer"},"startY":{"description":"Starting Y","type":"integer"},"endX":{"description":"Ending X","type":"integer"},"endY":{"description":"Ending Y","type":"integer"},"durationMs":{"description":"Drag duration in milliseconds","type":"integer","default":500}},"required":["startX","startY","endX","endY"]}},{"name":"scan_elements","description":"Numbered element map: captures a window, detects ALL interactive elements via UIAutomation \u002B OCR, numbers them on an annotated screenshot, and returns a numbered list with click coordinates. Use this to understand complex UIs (web app dialogs, dark themes). Then use mouse_click with the coordinates from the list.","inputSchema":{"type":"object","properties":{"windowTitle":{"description":"Part of window title (case-insensitive)","type":"string"},"savePath":{"description":"File path to save annotated PNG with numbered elements","type":"string"},"limit":{"description":"Max elements to show (default 60)","type":"integer","default":60},"maxWidth":{"description":"Max image width for AI readability (default 1920)","type":"integer","default":1920}},"required":["windowTitle","savePath"]}},{"name":"mouse_get_position","description":"Get the current mouse cursor position.","inputSchema":{"type":"object","properties":{}}},{"name":"minimize_window","description":"Minimize a window by title.","inputSchema":{"type":"object","properties":{"windowTitle":{"description":"Part of the window title (case-insensitive)","type":"string"}},"required":["windowTitle"]}}]},"id":1,"jsonrpc":"2.0"}info: ModelContextProtocol.Server.McpServer[570385771] | 錯誤: Extra data: line 1 column 20558 (char 20557)
+2026-04-11 02:15:12,150 [ERROR] 處理 MCP 訊息時發生錯誤: readuntil() called while another coroutine is already waiting for incoming data
+Traceback (most recent call last):
+  File "C:\project_Code\McpProxy\src\mcp_proxy\server.py", line 67, in _handle_mcp_message
+    res = await self.proxy.get_available_tools()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\project_Code\McpProxy\src\mcp_proxy\proxy.py", line 46, in get_available_tools
+    tools = await self.client.list_tools()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\project_Code\McpProxy\src\mcp_proxy\stdio_client.py", line 115, in list_tools
+    result_data = await self._send_request("tools/list")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\project_Code\McpProxy\src\mcp_proxy\stdio_client.py", line 69, in _send_request
+    line = await self.process.stdout.readline()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\miniconda3\Lib\asyncio\streams.py", line 568, in readline
+    line = await self.readuntil(sep)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\miniconda3\Lib\asyncio\streams.py", line 660, in readuntil
+    await self._wait_for_data('readuntil')
+  File "C:\ProgramData\miniconda3\Lib\asyncio\streams.py", line 531, in _wait_for_data
+    raise RuntimeError(
+RuntimeError: readuntil() called while another coroutine is already waiting for incoming data
+2026-04-11 02:15:12,198 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
+2026-04-11 02:26:54,236 [INFO] 正在關閉 MCP 伺服器進程...
