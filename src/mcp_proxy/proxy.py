@@ -40,11 +40,30 @@ class McpProxy:
 
     async def get_available_tools(self) -> List[Dict[str, Any]]:
         """
-        獲取可用工具列表 (相容原介面)
+        獲取可用工具列表，並對定義進行簡化以提高 Open WebUI 的兼容性。
         """
         try:
             tools = await self.client.list_tools()
-            return [tool.model_dump() if hasattr(tool, 'model_dump') else tool for tool in tools]
+            simplified_tools = []
+            for tool in tools:
+                t_dict = tool.model_dump() if hasattr(tool, 'model_dump') else tool
+                
+                # 簡化描述：限制長度防止 UI 截斷
+                if t_dict.get('description'):
+                    desc = t_dict['description']
+                    if len(desc) > 60:
+                        t_dict['description'] = desc[:57] + "..."
+                
+                # 簡化 Schema：確保它是基礎字典格式
+                if 'inputSchema' in t_dict:
+                    schema = t_dict['inputSchema']
+                    # 如果 schema 太複雜，這裡可以進一步簡化，目前先保持結構但確保是 dict
+                    if not isinstance(schema, dict):
+                        t_dict['inputSchema'] = {"type": "object", "properties": {}}
+                
+                simplified_tools.append(t_dict)
+                
+            return simplified_tools
         except McpProxyError as e:
             logger.error(f"獲取工具列表失敗: {e}")
             raise
@@ -73,7 +92,18 @@ class McpProxy:
             
             if path_match:
                 extracted_path = path_match.group(1)
-                logger.info(f"🚨 [全域掃描] 在結果中發現潛在路徑: {extracted_path}")
+                if extracted_path.startswith(('http://', 'https://', '//')):
+                    logger.debug(f"跳過 URL 格式的路徑: {extracted_path}")
+                    return {
+                        "content": [
+                            {
+                                "type": "text",
+                                "text": str(res_dict)
+                            }
+                        ],
+                        "isError": False
+                    }
+                logger.info(f"[全域掃描] 在結果中發現潛在路徑: {extracted_path}")
                 # 構造一個統一的格式交給 _handle_image_result 處理
                 return self._handle_image_result({"path": extracted_path})
             
@@ -170,6 +200,20 @@ class McpProxy:
         if not path:
             return {"content": [{"type": "text", "text": str(result)}], "isError": True}
 
+        # 專門處理伺服器回傳的錯誤代碼 (例如 "0/0")
+        if path == "0/0":
+            logger.error(f"伺服器回傳錯誤代碼 0/0，截圖操作失敗")
+            return {
+                "content": [
+                    {
+                        "type": "text",
+                        "text": "【系統通知】伺服器截圖失敗 (錯誤代碼 0/0)。這通常是因為目標視窗未找到或系統權限不足，導致無法生成圖片文件。請嘗試重新聚焦視窗或檢查權限。"
+                    }
+                ],
+                "isError": False # 設為 False 以確保錯誤訊息能傳回給 AI，避免 AI 卡死
+            }
+            
+
         # 1. 使用路徑適配層獲取所有候選路徑
         possible_paths = self._normalize_path(path)
         
@@ -202,11 +246,10 @@ class McpProxy:
                 except Exception as e:
                     logger.error(f"極限搜索出錯: {e}")
 
-        if not actual_path:
-            logger.error(f"🚨 [伺服器端風險] 無法定位圖片文件: {path}")
+        if not actual_path or not os.path.isfile(actual_path):
+            logger.error(f"[伺服器端風險] 無法定位有效的圖片文件: {path}")
             logger.error(f"嘗試路徑清單: {possible_paths}")
-            logger.error(f"極限搜索結果: 在 TEMP 目錄中未發現最近 5 分鐘內生成的圖片。")
-            logger.error(f"診斷：伺服器可能回傳了虛擬路徑，或截圖操作實際上失敗但回傳了 success。")
+            logger.error(f"診斷：路徑可能指向資料夾或文件不存在。")
             return {
                 "content": [
                     {
@@ -252,7 +295,7 @@ class McpProxy:
                 "isError": False
             }
         except PermissionError as e:
-            logger.error(f"🚨 [權限風險] 無權讀取圖片文件 {actual_path}: {e}")
+            logger.error(f"[權限風險] 無權讀取圖片文件 {actual_path}: {e}")
             return {
                 "content": [
                     {

@@ -75,6 +75,14 @@ class McpServer:
                 result = res.model_dump() if hasattr(res, 'model_dump') else res
             elif mcp_msg.method == "tools/list":
                 res = await self.proxy.get_available_tools()
+                import json
+                response_body = json.dumps({"tools": res})
+                
+                # 記錄工具名稱清單，用於對比 Open WebUI 顯示結果
+                tool_names = [t.get('name') for t in res]
+                logger.info(f"Server: 準備回傳 {len(res)} 個工具, 響應大小: {len(response_body)} bytes")
+                logger.info(f"工具名稱清單 (順序): {tool_names}")
+                
                 result = {"tools": res}
             elif mcp_msg.method == "tools/call":
                 params = mcp_msg.params or {}

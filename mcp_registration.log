@@ -818,3 +818,8 @@ Traceback (most recent call last):
 RuntimeError: readuntil() called while another coroutine is already waiting for incoming data
 2026-04-11 02:15:12,198 [INFO] 無 SessionId，直接回傳 MCP 結果給客戶端 (Method: tools/list)
 2026-04-11 02:26:54,236 [INFO] 正在關閉 MCP 伺服器進程...
+2026-04-11 03:31:58,118 [INFO] 使用 Stdio 模式啟動 MCP 代理 (EXE: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe)
+2026-04-11 03:31:58,118 [INFO] 正在啟動 MCP 伺服器進程: C:\tools\Orbination\Orbination-AI-Desktop-Vision-Control\DesktopControlMcp\bin\Release\net8.0-windows10.0.22621.0\DesktopControlMcp.exe
+2026-04-11 03:31:58,125 [INFO] MCP 伺服器進程已啟動
+2026-04-11 03:31:58,125 [INFO] 底層 MCP 代理已初始化並啟動
+2026-04-11 03:38:30,244 [INFO] 正在關閉 MCP 伺服器進程...

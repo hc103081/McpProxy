@@ -114,6 +114,7 @@ class StdioMcpClient:
             
         result_data = await self._send_request("tools/list")
         result = MCPToolListResult(**result_data)
+        logger.info(f"StdioClient: 從伺服器接收到 {len(result.tools)} 個工具")
         return result.tools
 
     async def call_tool(self, name: str, arguments: Dict[str, Any]) -> Any:
